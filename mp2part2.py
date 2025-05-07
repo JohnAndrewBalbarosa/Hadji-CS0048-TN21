@@ -30,5 +30,4 @@ def cToF(num):
 def fToC(num):
     return (num - 32) * 5/9
 
-menu()
 

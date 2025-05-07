@@ -36,5 +36,4 @@ def play():
                 print(f"Congratulations! You guessed the number in {attempt} attempts.")
     except:
         print("Wrong data type input, try again!")
-    
-menu()
+
