@@ -66,3 +66,5 @@ def divide(num):
         total /= i
     return total
 
+
+menu()

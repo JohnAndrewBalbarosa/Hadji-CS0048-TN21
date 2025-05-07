@@ -23,15 +23,15 @@ def main():
                 case False:
                     continue
                 case 1:
-                    menu1()
+                    mp2part1.menu()
                 case 2:
-                    menu2()
+                    mp2part2.menu()
                 case 3:
-                    menu3()
+                    mp2part3.menu()
                 case 4:
-                    menu4()
+                    mp2part4.menu()
                 case 5:
-                    menu5()    
+                    mp2part5.menu()    
     except:
         padding("Something is wrong with the main menu. Shutting down!")
         return

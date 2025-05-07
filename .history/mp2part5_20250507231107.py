@@ -39,3 +39,5 @@ def calculateAverage(grades):
     except:
         print("Wrong data type input")
         return
+
+menu()

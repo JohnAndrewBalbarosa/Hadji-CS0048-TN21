@@ -31,7 +31,7 @@ def addTask(task):
     try:
         added = dataTypeInput("Enter the task to add: ", "string")
         task.append(added)
-        print("Task Added.")
+        print("")
     except:
         padding("Something just happened. Try again!")
 
@@ -52,3 +52,5 @@ def viewTask(task):
     padding("Veiwing all taks")
     for i in task:
         print(i)
+
+menu()

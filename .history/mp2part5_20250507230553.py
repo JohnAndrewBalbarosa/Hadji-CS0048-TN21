@@ -25,17 +25,7 @@ def menu():
 def addScore(grades):
     try:
         a = dataTypeInput("Enter the subject: ", "string")
-        b = dataTypeInput("Enter the score:", "float")
-        grades[a] = b
-        print("Score Added.")
-    except:
-        print("Wrong data type input")
-        return
+        b = dataTypeInput("Enter the ")
 
 def calculateAverage(grades):
-    try:
-        total = sum(grades.values())
-        print(f"Average Grade: {total/len(grades)}")
-    except:
-        print("Wrong data type input")
-        return
+    pass

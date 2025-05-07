@@ -1,8 +1,8 @@
-from mp2part1 import menu as menu1
-from mp2part2 import menu as menu2
-from mp2part3 import menu as menu3
-from mp2part4 import menu as menu4 
-from mp2part5 import menu as menu5
+from mp2part1 import menu
+from mp2part2 import menu
+from mp2part3 import menu
+from mp2part4 import menu
+from mp2part5 import menu
 from mp2function import *
 
 listMenu = [
@@ -17,21 +17,21 @@ def main():
     try:
         while True:
             displayMenu(listMenu)
-            match(menuPrompt(listMenu)):
+            match(menuPrompt):
                 case "Error":
                     return
                 case False:
                     continue
                 case 1:
-                    menu1()
+                    mp2part1.menu()
                 case 2:
-                    menu2()
+                    mp2part2.menu()
                 case 3:
-                    menu3()
+                    mp2part3.menu()
                 case 4:
-                    menu4()
+                    mp2part4.menu()
                 case 5:
-                    menu5()    
+                    mp2part5.menu()    
     except:
         padding("Something is wrong with the main menu. Shutting down!")
         return

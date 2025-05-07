@@ -35,7 +35,7 @@ def addScore(grades):
 def calculateAverage(grades):
     try:
         total = sum(grades.values())
-        print(f"Average Grade: {total/len(grades)}")
+        print(f"Average Gre{total/len(grades)}")
     except:
         print("Wrong data type input")
         return

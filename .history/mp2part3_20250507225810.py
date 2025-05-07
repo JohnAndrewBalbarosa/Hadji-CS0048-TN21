@@ -11,7 +11,6 @@ def menu():
     listTask = []
     try:
         while True:
-            displayMenu(listMenu)
             match(menuPrompt(listMenu)):
                 case 1:
                     addTask(listTask)
@@ -23,22 +22,19 @@ def menu():
                     return
                 case "Error":
                     continue
-    except:
-        padding("Something happened. Please try again!")
     
 
 def addTask(task):
     try:
-        added = dataTypeInput("Enter the task to add: ", "string")
+        added = dataTypeInput("Enter the task to add", "string")
         task.append(added)
-        print("Task Added.")
     except:
         padding("Something just happened. Try again!")
 
 def removeTask(task):
     try:
-        toRemove = dataTypeInput("Enter the task to remove: " ,"string")
-        index = task.index(toRemove)
+        toRemove = dataTypeInput("Enter the task to remove:" ,"string")
+        index = task.index("toRemove")
         for i in task:
             if i == toRemove:
                 task.pop(index)

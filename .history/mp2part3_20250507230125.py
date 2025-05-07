@@ -52,3 +52,5 @@ def viewTask(task):
     padding("Veiwing all taks")
     for i in task:
         print(i)
+
+menu()

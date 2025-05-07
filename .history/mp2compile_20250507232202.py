@@ -25,7 +25,7 @@ def main():
                 case 1:
                     menu1()
                 case 2:
-                    menu2()
+                    men2()
                 case 3:
                     menu3()
                 case 4:
