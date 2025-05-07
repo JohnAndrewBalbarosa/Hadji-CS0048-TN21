@@ -1,0 +1,8 @@
+from random import random
+
+def menu():
+    pass
+
+def play():
+    random.randint(1,100)
+    
