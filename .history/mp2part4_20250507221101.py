@@ -28,10 +28,10 @@ def play():
         while answer != choice:
             choice = dataTypeInput("Guess the number: ", "int")
             attempt += 1
-            if choice > answer:
-                print("Too high!")
-            elif choice < answer:
+            if answer > choice:
                 print("Too low!")
+            if answer < choice:
+                print("Too high!")
             else:
                 print(f"Congratulations! You guessed the number in {attempt} attempts.")
     except:

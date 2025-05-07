@@ -30,7 +30,7 @@ def play():
             attempt += 1
             if choice > answer:
                 print("Too high!")
-            elif choice < answer:
+            if choice < answer:
                 print("Too low!")
             else:
                 print(f"Congratulations! You guessed the number in {attempt} attempts.")

@@ -1,6 +1,4 @@
-listMenu = [
-    ""
-]
+
 
 def menu():
     pass

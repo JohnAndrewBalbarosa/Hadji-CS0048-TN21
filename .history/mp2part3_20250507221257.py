@@ -1,9 +1,5 @@
-listMenu = [
-    ""
-]
-
 def menu():
-    pass
+    
 
 def addTask():
     pass

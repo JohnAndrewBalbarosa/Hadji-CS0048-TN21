@@ -1,4 +1,4 @@
-from random import randint
+from random import random
 from mp2function import *
 
 listMenu = [
@@ -21,16 +21,16 @@ def menu():
             continue
 
 def play():
-    answer = randint(1,100)
+    answer = random.randint(1,100)
     try:
         choice = None
         attempt = 0
         while answer != choice:
-            choice = dataTypeInput("Guess the number: ", "int")
+            choice = dataTypeInput("Guess the number", "int")
             attempt += 1
-            if choice > answer:
+            if answer > choice:
                 print("Too high!")
-            elif choice < answer:
+            if answer < choice:
                 print("Too low!")
             else:
                 print(f"Congratulations! You guessed the number in {attempt} attempts.")
