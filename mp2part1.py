@@ -11,26 +11,35 @@ def menu():
     while True:
         result = 0
         displayMenu(listOfMenu)
-        match(menuPrompt(listOfMenu)):
-            case "Error":
-                continue
-            case False:
-                return
-            case 1:
-                result = add(twoInputs())
-            case 2:
-                result = subtract(twoInputs())
-            case 3:
-                result = multiply(twoInputs())
-            case 4:
-                result = divide(twoInputs())
+        try:
+            match(menuPrompt(listOfMenu)):
+                case "Error":
+                    continue
+                case False:
+                    return
+                case 1:
+                    result = add(twoInputs())
+                case 2:
+                    result = subtract(twoInputs())
+                case 3:
+                    result = multiply(twoInputs())
+                case 4:
+                    result = divide(twoInputs())
+        except:
+            padding("Something happened so try again")
+            continue
         print(f"Result: {result}")
 
 def twoInputs():
-    a = dataTypeInput("Enter first number: ", "int")
-    b = dataTypeInput("Enter second number: ", "int")
+    try:
+        a = dataTypeInput("Enter first number: ", "int")
+        b = dataTypeInput("Enter second number: ", "int")
+        return a,b
+    except :
+        print("Not the correct data type. Try again.")
 
 def add(num):
+
     total = 0
     for i in num:
         total += i

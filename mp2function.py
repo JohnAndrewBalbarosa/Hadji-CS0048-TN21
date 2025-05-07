@@ -1,9 +1,9 @@
 def menuPrompt(menu, prompt = False):
-    default =  f"Enter your choice (1 - {len(menu)}): "
+    size = len(menu)
+    default =  f"Enter your choice (1 - {size+1}): "
     choice = input(prompt or default)
     try:
         idx = int(choice)
-        size = len(menu)
         if 1 <= idx <= size:
             return idx
         if idx == size + 1:
@@ -18,21 +18,18 @@ def menuPrompt(menu, prompt = False):
 #Funtion to enter choice for the menu
 def dataTypeInput(prompt, type):
     choice = input(prompt)
-    try:
-        match(type):
-            case "int":
-                choice = int(choice)
-            case "float":
-                choice = float(choice)
-            case "string":
-                pass
-            case _:
-                print("Not an included data type")
-                return False    
-        return choice
-    except ValueError:
-        print("Not the correct data type. Try again.")
-        return "Error"
+    match(type):
+        case "int":
+            choice = int(choice)
+        case "float":
+            choice = float(choice)
+        case "string":
+            pass
+        case _:
+            print("Not an included data type")
+            return False    
+    return choice
+    
 
 # Function to display the menu
 def displayMenu(menu):
